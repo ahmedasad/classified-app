@@ -6,11 +6,12 @@ import retrofit2.http.GET
 
 interface ClassifiedServices {
 
-    companion object{
+    companion object {
         const val BASE_URL = "https://ey3f2y0nre.execute-api.us-east-1.amazonaws.com/"
-        const val CLASSIFIEDS = ""
+        private const val DEFAULTS = "default/"
+        private const val CLASSIFIED_LIST = "${DEFAULTS}dynamodb-writer"
     }
 
-    @GET
-    suspend fun getClassifieds(): Response<GetClassifiedListResponse>
+    @GET(CLASSIFIED_LIST)
+    suspend fun getClassifiedList(): Response<GetClassifiedListResponse>
 }
