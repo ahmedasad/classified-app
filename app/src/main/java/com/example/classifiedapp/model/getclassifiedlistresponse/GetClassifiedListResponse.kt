@@ -1,4 +1,5 @@
 package com.example.classifiedapp.model.getclassifiedlistresponse
 
-class GetClassifiedListResponse {
-}
+data class GetClassifiedListResponse (
+    val results:ArrayList<Items>
+    )

@@ -1,4 +1,4 @@
-package com.example.classifiedapp.ui.launchfragment.homefragment
+package com.example.classifiedapp.ui.homefragment
 
 import androidx.lifecycle.ViewModel
 

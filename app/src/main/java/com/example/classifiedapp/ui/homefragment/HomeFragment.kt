@@ -1,13 +1,13 @@
-package com.example.classifiedapp.ui.launchfragment
+package com.example.classifiedapp.ui.homefragment
 
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.example.classifiedapp.R
 import com.example.classifiedapp.base.BaseFragment
-import com.example.classifiedapp.databinding.FragmentSplashBinding
+import com.example.classifiedapp.databinding.FragmentHomeBinding
 
-class SplashFragment : BaseFragment<FragmentSplashBinding>() {
+class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -17,8 +17,8 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>() {
 
 
 
-    override fun getLayout(): Int = R.layout.fragment_splash
+    override fun getLayout(): Int = R.layout.fragment_home
 
-    override fun initiateView(view: View): FragmentSplashBinding = DataBindingUtil.bind(view)!!
+    override fun initiateView(view: View): FragmentHomeBinding = DataBindingUtil.bind(view)!!
 
 }
