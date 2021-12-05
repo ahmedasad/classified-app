@@ -3,7 +3,7 @@ package com.example.classifiedapp.base
 import android.app.Application
 import com.example.classifiedapp.data.network.Client
 import com.example.classifiedapp.data.network.services.ClassifiedServices
-import com.example.classifiedapp.data.repositories.classifiedRepository
+import com.example.classifiedapp.data.repositories.ClassifiedRepository
 import com.example.classifiedapp.ui.homefragment.HomeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.context.startKoin
@@ -34,7 +34,7 @@ class App:Application() {
 
         //repositories
         val appRepositoryModule: Module = module {
-            single { classifiedRepository(get()) }
+            single { ClassifiedRepository(get()) }
         }
         val viewModelModule = module{
             viewModel { HomeViewModel(get(),get()) }

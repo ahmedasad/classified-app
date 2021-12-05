@@ -1,5 +1,8 @@
 package com.example.classifiedapp
 
+import android.content.Context
+import com.example.classifiedapp.utils.Helper
+import com.example.classifiedapp.utils.getCommaSeparatedPrice
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -10,8 +13,11 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
+    //to run the test. need to change the getCommaSeparatedPrice() return type to String
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun setPriceText() {
+//        assertEquals("AED 5,000 \n / per item",getCommaSeparatedPrice("AED 5000"))
     }
+
 }
