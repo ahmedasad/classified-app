@@ -10,5 +10,7 @@ This app is developed using following components:
 - RXBining
 
 Screen#1
+<img src="screen_1.jpg"  width="400" height="400"/>
+
 Screen#2
 Screen#3
