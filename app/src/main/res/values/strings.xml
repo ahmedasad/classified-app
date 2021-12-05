@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ClassifiedAPP</string>
+    <string name="product_details">Product Details</string>
+    <string name="products">Products</string>
 </resources>

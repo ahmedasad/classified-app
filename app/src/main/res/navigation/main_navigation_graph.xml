@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation_graph"
+    app:startDestination="@id/launch_fragment">
+
+    <fragment
+        android:id="@+id/launch_fragment"
+        android:name="com.example.classifiedapp.ui.launchfragment.SplashFragment"
+        tools:layout="@layout/fragment_splash">
+
+        <action
+            android:id="@+id/navigate_from_splash_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@anim/slide_in_fragment_from_right"
+            app:exitAnim="@anim/slide_out_fragment_to_left"
+            app:popEnterAnim="@anim/slide_out_fragment_to_right"
+            app:popExitAnim="@anim/slide_in_fragment_from_left"
+            app:popUpTo="@id/launch_fragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.classifiedapp.ui.homefragment.HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/navigate_from_home_fragment_to_details_fragment"
+            app:destination="@id/details_fragment"
+            app:enterAnim="@anim/slide_in_fragment_from_right"
+            app:exitAnim="@anim/slide_out_fragment_to_left"
+            app:popEnterAnim="@anim/slide_out_fragment_to_right"
+            app:popExitAnim="@anim/slide_in_fragment_from_left"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/details_fragment"
+        android:name="com.example.classifiedapp.ui.detailsfragment.DetailsFragment"
+        tools:layout="@layout/fragment_details" />
+
+</navigation>

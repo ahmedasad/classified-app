@@ -14,6 +14,7 @@ abstract class BaseRepo {
     protected fun <T> getNetworkResult(call: suspend () -> Response<T>): LiveData<Result<T>> =
         liveData(Dispatchers.IO) {
             try {
+                emit(Result.Loading)
                 val response = call.invoke()
                     emit(gatherResult(response))
 

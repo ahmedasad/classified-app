@@ -18,9 +18,9 @@ class Client {
         val interceptor = HttpLoggingInterceptor()
 
         OkHttpClient.Builder()
-            .connectTimeout(60,TimeUnit.MILLISECONDS)
-            .writeTimeout(60,TimeUnit.MILLISECONDS)
-            .readTimeout(60,TimeUnit.MILLISECONDS)
+            .connectTimeout(60,TimeUnit.SECONDS)
+            .writeTimeout(60,TimeUnit.SECONDS)
+            .readTimeout(60,TimeUnit.SECONDS)
             .addInterceptor(interceptor.setLevel(HttpLoggingInterceptor.Level.BODY))
             .build()
     }
